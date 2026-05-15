@@ -1,0 +1,10 @@
+{
+  "name": "baseball-live-analytics-toolkit",
+  "scripts": {
+    "setup": "python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && npm --prefix apps/web install",
+    "dev:api": "python -m apps.api",
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev": "npm run dev:api & npm run dev:web",
+    "test:ci": "npm --prefix apps/web run build"
+  }
+}
